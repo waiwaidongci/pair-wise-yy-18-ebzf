@@ -31,8 +31,7 @@ module.exports = {
       statuses: ['草稿', '已装箱', '巡演中', '返场清点中', '已闭环'],
       required: ['showName', 'venue', 'play', 'headIds', 'accessoryIds'],
       titleFields: ['showName', 'play']
-    },
-    lossReports: {
+    },    lossReports: {
       label: '缺损追踪',
       defaultStatus: '待处理',
       statuses: ['待处理', '修复中', '已补齐', '确认为遗失'],
@@ -66,6 +65,87 @@ module.exports = {
         play: '火焰山',
         boxNo: '配件箱-02'
       }
+    },
+    {
+      collection: 'puppetHeads',
+      id: 'head-tour-1',
+      status: '已装箱',
+      data: {
+        role: '孙悟空',
+        play: '火焰山',
+        paintStatus: '完好',
+        mechanism: '转眼灵活',
+        boxNo: '巡演箱甲-01',
+        currentUsable: true
+      }
+    },
+    {
+      collection: 'puppetHeads',
+      id: 'head-tour-2',
+      status: '已装箱',
+      data: {
+        role: '铁扇公主',
+        play: '火焰山',
+        paintStatus: '完好',
+        mechanism: '水袖联动',
+        boxNo: '巡演箱甲-01',
+        currentUsable: true
+      }
+    },
+    {
+      collection: 'puppetHeads',
+      id: 'head-tour-3',
+      status: '已装箱',
+      data: {
+        role: '猪八戒',
+        play: '火焰山',
+        paintStatus: '完好',
+        mechanism: '大耳摇动',
+        boxNo: '巡演箱甲-01',
+        currentUsable: true
+      }
+    },
+    {
+      collection: 'accessories',
+      id: 'acc-tour-1',
+      status: '已装箱',
+      data: { name: '金箍棒', role: '孙悟空', play: '火焰山', boxNo: '巡演箱甲-01' }
+    },
+    {
+      collection: 'accessories',
+      id: 'acc-tour-2',
+      status: '已装箱',
+      data: { name: '芭蕉扇', role: '铁扇公主', play: '火焰山', boxNo: '巡演箱甲-01' }
+    },
+    {
+      collection: 'accessories',
+      id: 'acc-other-1',
+      status: '在库',
+      data: { name: '短靠', role: '武生', play: '火焰山', boxNo: '配件箱-02' }
+    },
+    {
+      // 旧装箱单：未给 capacity，返场清点时按原清单（3 偶头 + 2 配件 = 5）回填
+      collection: 'tourBoxes',
+      id: 'box-seed-tour-1',
+      status: '巡演中',
+      data: {
+        showName: '火焰山·江南巡演',
+        venue: '苏州昆曲戏台',
+        play: '火焰山',
+        boxNo: '巡演箱甲-01',
+        headIds: ['head-tour-1', 'head-tour-2', 'head-tour-3'],
+        accessoryIds: ['acc-tour-1', 'acc-tour-2'],
+        headStoreBoxes: {
+          'head-tour-1': '巡演箱甲-01',
+          'head-tour-2': '巡演箱甲-01',
+          'head-tour-3': '巡演箱甲-01'
+        },
+        accessoryStoreBoxes: {
+          'acc-tour-1': '巡演箱甲-01',
+          'acc-tour-2': '巡演箱甲-01'
+        }
+      },
+      note: '封箱巡演，等待返场清点'
     }
   ],
   examples: [

@@ -1,5 +1,5 @@
 node_modules/
-data/app.db
+data/
 .DS_Store
 
 # Logs
