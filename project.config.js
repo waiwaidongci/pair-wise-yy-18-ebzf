@@ -66,6 +66,19 @@ module.exports = {
         play: '火焰山',
         boxNo: '配件箱-02'
       }
+    },
+    {
+      collection: 'tourBoxes',
+      id: 'tourbox-seed-1',
+      status: '巡演中',
+      data: {
+        showName: '火焰山巡演',
+        venue: '北京大戏院',
+        play: '火焰山',
+        headIds: ['head-seed-1'],
+        accessoryIds: ['accessory-seed-1']
+      },
+      note: '巡演返场待清点（旧单无容量，按原清单回填）'
     }
   ],
   examples: [
